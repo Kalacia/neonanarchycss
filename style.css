@@ -8,7 +8,20 @@ linkblue: #20A4F3
 body {
     background-color: black;
     color: #D3D3D3;
+    font-family: Palatino, Palatino Linotype, Palatino LT STD, Book Antiqua, Georgia, serif;
 }
+
+* {
+    cursor: url(%%cursor%%), default!important;
+}
+
+.redditname a {
+    color: #D3D3D3;
+    font-size: 120%;
+}
+
+
+/* header */
 
 #header {
     background-color: black;
@@ -21,29 +34,98 @@ body {
     padding-top: 180px;
 }
 
-.redditname a {
-    color: #D3D3D3;
-    font-size: 120%;
-}
-
 #header-bottom-left .redditname a {
     color: #D3D3D3;
     font-size: 200%;
-    text-shadow: 1px 1px 1px #222, 0 1px 1px #222, 1px 0 1px #222, 1px 1px 1px #222, 0 1px 1px #222, 1px 0 1px #222;
 }
 
-.side {
-    background-color: #424242;
-    padding: 1px;
+#header-bottom-right {
+    top: 55px;
+    bottom: inherit;
+    right: 20px;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    /*
+    text-transform: uppercase;
+    right: 5px;
+    bottom: 0px;
+    padding: 4px;
+    background-color: transparent;
+    height: 50px;
+    background: url(%%before%%) 45px 20px/150px no-repeat;
+    background-size: 80% 50%;
+    position: absolute;
+    */
 }
 
-.side .redditname a {
-    color: black;
+#header-bottom-right .user {
+    position: absolute;
+    top: 106px;
+    right: -2px;
+    padding: 0;
+    white-space: nowrap;
+    color: #b8d9d1!important;
+    font-size: 0;
+    font-weight: bold;
+    transition: color 1s;
 }
 
-.flair-yellowandblack {
-    color: yellow;
-    background: black;
+#header-bottom-right .seperator {
+    display: none;
+}
+
+
+/**
+#mail,
+#mail.nohavemail,
+#mail.havemail,
+#chat:not(.active),
+#chat.active,
+#modmail,
+#modmail.nohavemail,
+#modmail.havemail, 
+#new_modmail, 
+#new_modmail.nohavemail, 
+#new_modmail.havemail, 
+.pref-lang, 
+#header .gearIcon, 
+.logout a {
+    display: inline-block;
+    position: relative;
+    top: 0;
+    vertical-align: top;
+    height: 35px;
+    width: auto;
+    margin: 0 0 0 10px;
+    padding: 9px 10px 10px;
+    background: rgba(0,0,0,0.25);
+    border: 1px solid #b8d9d1;
+    font-size: 0;
+    transition: border 0.25s
+}**/
+
+#header-bottom-right:hover {
+    text-transform: uppercase;
+    right: 5px;
+    bottom: 0px;
+    padding: 4px;
+    background-color: transparent;
+    height: 50px;
+    background: url(%%after%%) 45px 20px/150px no-repeat;
+    background-size: 70%;
+    position: absolute;
+}
+
+#header-bottom-right a {
+    color: #65dc98;
+    font-family: monaco, Consolas, Lucida Console, monospace;
+}
+
+#header-bottom-right a:hover {
+    color: #c4ffff;
+    font-family: monaco, Consolas, Lucida Console, monospace;
 }
 
 #header .tabmenu li a {
@@ -61,11 +143,41 @@ body {
     background-color: #D3D3D3;
 }
 
+
+/* end of header */
+
+.side {
+    background-color: #424242;
+    padding: 1px;
+}
+
+.side .redditname a {
+    color: black;
+}
+
+.flair-yellowandblack {
+    color: yellow;
+    background: black;
+}
+
+h1.hover.redditname {
+    font-family: Rockwell, Courier Bold, Courier, Georgia, Times, Times New Roman, serif;
+}
+
+
+/* #preview */
+
 #preview_link_normal {
     border: 1px solid #5815E8;
     margin-top: 1px;
     margin-bottom: 1px;
-    padding: 1px
+    padding: 1px;
+}
+
+#preview_link_normal:hover,
+#preview_link_compressed:hover,
+#preview_link_media:hover {
+    border: 1px solid #8a5bee;
 }
 
 #preview_link_compressed {
@@ -86,14 +198,22 @@ body {
     margin-bottom: 1px;
 }
 
+#preview_link_stickied:hover {
+    border: 1px solid #ff81c3;
+}
+
 #preview_comment {
     border: 1px solid #FFBC0F;
     margin-top: 1px;
     margin-bottom: 1px;
 }
 
+#preview_comment:hover {
+    border: 1px solid #ffd057;
+}
+
 #preview_comment li {
-    color: #D3D3D3
+    color: #D3D3D3;
 }
 
 #preview_comment_gilded {
@@ -102,16 +222,43 @@ body {
     margin-bottom: 1px;
 }
 
-#preview_comment_gilded li {
-    color: #D3D3D3
+#preview_comment_gilded:hover {
+    border: 1px solid #ff8132;
 }
+
+#preview_comment_gilded li {
+    color: #D3D3D3;
+}
+
+#preview_comment_gilded a,
+#preview_comment a:active {
+    font-family: monaco, Consolas, Lucida Console, monospace;
+}
+
+#preview_comment a:hover,
+#preview_comment_gilded a:hover {
+    color: #69c2f7;
+}
+
+#preview_comment_gilded a.author.may-blank,
+#preview_comment a.author.may-blank {
+    color: #defe47;
+}
+
+
+/* end of #preview */
 
 .title.may-blank.loggedin {
     color: #20A4F3;
+    font-family: monaco, Consolas, Lucida Console, monospace;
 }
 
 .title .may-blank a:visited {
     color: blue;
+}
+
+.title.may-blank a:hover {
+    color: 7DF9FF;
 }
 
 .flat-list.buttons li a {
@@ -130,6 +277,13 @@ body {
     display: none;
 }
 
+
+/* .md */
+
+.md {
+    color: #fff69f;
+}
+
 .md p {
     color: #D3D3D3
 }
@@ -137,6 +291,9 @@ body {
 .md a {
     color: #20A4F3;
 }
+
+
+/* end of .md */
 
 .leavemoderator {
     background-color: #424242;
@@ -190,4 +347,243 @@ form.toggle.flairtoggle label {
 
 .account-activity-box a {
     color: #20A4F3;
+}
+
+div.side {
+    border: 2px;
+    border-style: solid;
+    border-color: #246699;
+}
+
+div.side hr {
+    border: 1px;
+    border-style: solid;
+    border-color: orange;
+}
+
+a.author {
+    font-family: Avant Garde, Avantgarde, Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+    color: #20a4f3;
+}
+
+span.flairrichtext.flaircolorlight.flair {
+    font-family: Rockwell, Courier Bold, Courier, Georgia, Times, Times New Roman, serif;
+}
+
+span.flairrichtext.flaircolorlight.linkflairlabel {
+    font-family: Rockwell Extra Bold, Rockwell Bold, monospace;
+    background-color: #83e095;
+}
+
+div.side h1 {
+    font-family: Rockwell Extra Bold, Rockwell Bold, monospace;
+}
+
+div.expando-button.collapsed.hide-when-pinned.selftext:hover {
+    background-color: #4d9cd6;
+    padding: 1px;
+    border-radius: 5px;
+}
+
+div.expando-button.collapsed.hide-when-pinned.selftext {
+    background-color: #F7FFFE;
+    padding: 1px;
+    border-radius: 5px;
+}
+
+a.expand {
+    color: #65dc98;
+}
+
+a.expand:hover {
+    color: #B2EDCB;
+}
+
+p.tagline {
+    color: #defe47;
+}
+
+span.separator {
+    color: #4d9e9b;
+    padding: 5px;
+}
+
+
+/**Mail and Preferences. If you remove up to next quote, it will go back to normal. **/
+
+#new_modmail.nohavemail:before {
+    background-position: -62px 0;
+}
+
+#new_modmail.nohavemail:before,
+#new_modmail.nohavemail:after,
+#new_modmail.havemail:before,
+#new_modmail.havemail:after {
+    width: 14px;
+}
+
+#mail.nohavemail {
+    background-image: url(%%icon%%);
+    background-position: -61px -1695px;
+    background-repeat: no-repeat;
+}
+
+#mail.nohavemail:before,
+#mail.havemail:before,
+#chat:not(.active):before,
+#chat.active:before,
+#modmail.nohavemail:before,
+#modmail.havemail:before,
+#new_modmail.nohavemail:before,
+#new_modmail.havemail:before,
+.pref-lang:before,
+#header .gearIcon:before,
+.logout a:before {
+    display: inline-block;
+    position: relative;
+    top: 0;
+    vertical-align: top;
+    height: 35px;
+    width: auto;
+    margin: 0 0 0 10px;
+    padding: 9px 10px 10px;
+    background: rgba(0, 0, 0, 0.25);
+    border: 1px solid #b8d9d1;
+    font-size: 0;
+    transition: border 0.25s
+}
+
+#mail.nohavemail:after,
+#mail.havemail:after,
+#chat:not(.active):after,
+#chat.active:after,
+#modmail.nohavemail:after,
+#modmail.havemail:after,
+#new_modmail.nohavemail:after,
+#new_modmail.havemail:after,
+.pref-lang:after,
+#header .gearIcon:after,
+.logout a:after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    height: 16px;
+    margin: -16px 0 0 0;
+    background: url(%%icon%%) top left / 92px;
+    opacity: 0;
+    transition: opacity 0.25s;
+}
+
+
+/**
+*,
+ ::before,
+ ::after {
+    box-sizing: border-box;
+ }
+ **/
+
+
+/**
+#new_modmail.nohavemail:after {
+    background-position: -62px -17px;
+}
+**/
+
+#new_modmail.nohavemail:before,
+#new_modmail.nohavemail:after,
+#new_modmail.havemail:before,
+#new_modmail.havemail:after {
+    width: 14px;
+}
+
+
+/**
+#mail.nohavemail:after,
+#mail.havemail:after,
+#chat:not(.active):after,
+#chat.active:after,
+#modmail.nohavemail:after,
+#modmail.havemail:after,
+#new_modmail.nohavemail:after,
+#new_modmail.havemail:after,
+.pref-lang:after,
+#header .gearIcon:after,
+.logout a:after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    height: 16px;
+    margin: -16px 0 0 0;
+    background: url(%%icon%%) top left / 92px;
+    opacity: 0;
+    transition: opacity 0.25s;
+}
+**/
+
+
+/**End of Mail stuff. Remove to see effects of it not being there.**/
+
+ul.flat-list.buttons a {
+    color: #20A4F3;
+    font-family: monaco, Consolas, Lucida Console, monospace;
+}
+
+ul.flat-list.buttons a:hover {
+    color: #69c2f7;
+    font-family: monaco, Consolas, Lucida Console, monospace;
+}
+
+a.give-gold.login-required.access-required.gold-give-gold:hover {
+    color: #ffd700;
+}
+
+a.choice:hover {
+    color: #69c2f7;
+    font-family: monaco, Consolas, Lucida Console, monospace;
+}
+
+a.choice,
+a.buygold.choice {
+    font-family: monaco, Consolas, Lucida Console, monospace;
+}
+
+a.buygold.choice:hover {
+    color: #ffd700;
+    font-family: monaco, Consolas, Lucida Console, monospace;
+}
+
+li.flat-vert.title {
+    color: #ff184c;
+    font-family: monaco, Consolas, Lucida Console, monospace;
+}
+
+.footer {
+    border-style: groove;
+    border: 1px solid #af43be;
+}
+
+.footer .col {
+    border-left: 1px solid #65dc98;
+}
+
+p.bottommenu,
+p.bottommenu a {
+    color: #ffd700;
+    font-family: monaco, Consolas, Lucida Console, monospace;
+}
+
+p.bottommenu a:hover {
+    color: #65dc98;
+    font-family: monaco, Consolas, Lucida Console, monospace;
+}
+
+.sidecontentbox .content,
+.titlebox .bottom {
+    border: 1px solid #598fc2;
+    font-family: monaco, Consolas, Lucida Console, monospace;
+}
+
+.gadget .reddit-link-title.may-blank {
+    color: #65dc98;
 }
