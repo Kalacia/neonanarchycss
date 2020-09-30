@@ -23,6 +23,91 @@ body {
 }
 
 
+/* header
+
+#header {
+    background-color: black;
+    background: url(%%Banner%%) no-repeat;
+    background-size: auto;
+}
+
+#header-bottom-left {
+    height: 100px;
+    padding-top: 180px;
+}
+
+#header-bottom-left .redditname a {
+    color: #D3D3D3;
+    font-size: 200%;
+}
+
+#header-bottom-right {
+    top: 55px;
+    bottom: inherit;
+    right: 20px;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+}
+
+#header-bottom-right .user {
+    position: absolute;
+    top: 106px;
+    right: -2px;
+    padding: 0;
+    white-space: nowrap;
+    color: #b8d9d1!important;
+    font-size: 0;
+    font-weight: bold;
+    transition: color 1s;
+}
+
+#header-bottom-right .seperator {
+    display: none;
+}
+
+#header-bottom-right:hover {
+    text-transform: uppercase;
+    right: 5px;
+    bottom: 0px;
+    padding: 4px;
+    background-color: transparent;
+    height: 50px;
+    background: url(%%after%%) 45px 20px/150px no-repeat;
+    background-size: 70%;
+    position: absolute;
+}
+
+#header-bottom-right a {
+    color: #65dc98;
+    font-family: monaco, Consolas, Lucida Console, monospace;
+}
+
+#header-bottom-right a:hover {
+    color: #c4ffff;
+    font-family: monaco, Consolas, Lucida Console, monospace;
+}
+
+#header .tabmenu li a {
+    color: #000;
+    background-color: #D3D3D3;
+}
+
+#header .tabmenu li.selected a {
+    color: #FFB100;
+    background-color: #D3D3D3;
+}
+
+#header .tabmenu li a:hover {
+    color: #FFB100;
+    background-color: #D3D3D3;
+}
+
+
+/* end of header */
+
+
 /** START **/
 
 
@@ -129,6 +214,9 @@ html .res-navTop #header-bottom-right,
 #header-bottom-right .separator {
     display: none
 }
+
+
+/** **/
 
 
 /** START **/
@@ -410,6 +498,15 @@ h1.hover.redditname {
 
 
 /* end of #preview */
+
+
+/** START **/
+
+
+/** cyberpunk **/
+
+
+/** END **/
 
 .title.may-blank.loggedin {
     color: #20A4F3;
@@ -807,7 +904,97 @@ html:lang(nt) ::after {
 /** END **/
 
 
-/**
+/**Mail and Preferences. If you remove up to next quote, it will go back to normal.
+
+#mail.nohavemail:before,
+#mail.nohavemail:after,
+#mail.havemail:before,
+#mail.havemail:after {
+    width: 23px
+}
+
+#mail.nohavemail:before {
+    background-position: 0 0
+}
+
+#mail.nohavemail:after {
+    background-position: 0 -17px
+}
+
+#mail.havemail:before {
+    background-position: 0 -33px
+}
+
+#mail.havemail:after {
+    background-position: 0 -50px
+}
+
+#new_modmail.nohavemail:before,
+#new_modmail.nohavemail:after,
+#new_modmail.havemail:before,
+#new_modmail.havemail:after {
+    width: 14px;
+}
+
+#new_modmail.nohavemail:before {
+    background-position: -62px 0;
+}
+
+#mail.nohavemail {
+    background-image: url(%%icon%%);
+    background-position: -61px -1695px;
+    background-repeat: no-repeat;
+}
+
+#mail.nohavemail:before,
+#mail.havemail:before,
+#chat:not(.active):before,
+#chat.active:before,
+#modmail.nohavemail:before,
+#modmail.havemail:before,
+#new_modmail.nohavemail:before,
+#new_modmail.havemail:before,
+.pref-lang:before,
+#header .gearIcon:before,
+.logout a:before {
+    display: inline-block;
+    position: relative;
+    top: 0;
+    vertical-align: top;
+    height: 35px;
+    width: auto;
+    margin: 0 0 0 10px;
+    padding: 9px 10px 10px;
+    background: rgba(0, 0, 0, 0.25);
+    border: 1px solid #b8d9d1;
+    font-size: 0;
+    transition: border 0.25s
+}
+
+#mail.nohavemail:after,
+#mail.havemail:after,
+#chat:not(.active):after,
+#chat.active:after,
+#modmail.nohavemail:after,
+#modmail.havemail:after,
+#new_modmail.nohavemail:after,
+#new_modmail.havemail:after,
+.pref-lang:after,
+#header .gearIcon:after,
+.logout a:after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    height: 16px;
+    margin: -16px 0 0 0;
+    background: url(%%icon%%) 
+    top left / 92px;
+    opacity: 0;
+    transition: opacity 0.25s;
+}
+
+End of Mail stuff. Remove to see effects of it not being there.**/
+
 ul.flat-list.buttons a {
     color: #20A4F3;
     font-family: monaco, Consolas, Lucida Console, monospace;
@@ -871,5 +1058,3 @@ p.bottommenu a:hover {
 .gadget .reddit-link-title.may-blank {
     color: #65dc98;
 }
-
-**/
