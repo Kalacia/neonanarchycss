@@ -77,27 +77,22 @@ body {
     color: #f05
 }
 
+#header .gearIcon:before,
+#header .gearIcon:after {
+    height: 15px;
+    width: 15px
+}
+
+#header .gearIcon:before {
+    background-position: -77px -33px
+}
+
+#header .gearIcon:after {
+    content: ""!important;
+    background-position: -77px -48px
+}
+
 body:not(.comments-page)#header .tabmenu li:nth-of-type(4) {
-    display: none
-}
-
-html .res-navTop #header-bottom-right,
-#header-bottom-right {
-    top: 55px;
-    bottom: inherit;
-    right: 20px;
-    padding: 0;
-    background-color: transparent;
-    border: none;
-    border-radius: 0
-}
-
-#header-bottom-right a {
-    color: #b8d9d1;
-    text-transform: uppercase
-}
-
-#header-bottom-right .separator {
     display: none
 }
 
@@ -306,6 +301,27 @@ html .user #RESAccountSwitcherIcon {
     background: none
 }
 
+html .user #RESAccountSwitcherIcon:before,
+html .user #RESAccountSwitcherIcon:after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    background: url("%%icon%%") -13px -63px / 87px no-repeat;
+    image-rendering: crisp-edges
+}
+
+html .user #RESAccountSwitcherIcon:after {
+    background-position: -13px -74px;
+    opacity: 0;
+    transition: opacity 0.25s
+}
+
+html .user #RESAccountSwitcherIcon:hover:after {
+    opacity: 1
+}
+
 
 /** END **/
 
@@ -328,32 +344,24 @@ h1.hover.redditname {
 }
 
 
-/** #preview
+/** #preview **/
 
-#preview_link_normal {
+
+/** This is also #siteTable in the "real" homepage **/
+
+#siteTable {
     border: 1px solid #5815E8;
     margin-top: 1px;
     margin-bottom: 1px;
     padding: 1px;
 }
 
-#preview_link_normal:hover,
-#preview_link_compressed:hover,
-#preview_link_media:hover {
+#siteTable:hover {
     border: 1px solid #8a5bee;
 }
 
-#preview_link_compressed {
-    border: 1px solid #5815E8;
-    margin-top: 1px;
-    margin-bottom: 1px;
-}
 
-#preview_link_media {
-    border: 1px solid #5815E8;
-    margin-top: 1px;
-    margin-bottom: 1px;
-}
+/** **/
 
 #preview_link_stickied {
     border: 1px solid #FF4CAA;
@@ -595,7 +603,8 @@ span.separator {
     position: relative;
     top: 0;
     vertical-align: top;
-    height: 35px;
+    /*height: 35px;*/
+    height: 14px;
     width: auto;
     margin: 0 0 0 10px;
     padding: 9px 10px 10px;
