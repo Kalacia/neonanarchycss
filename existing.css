@@ -1,0 +1,29 @@
+#header-bottom-left {
+    height: 100px;
+    padding-top: 180px;
+    background: url(%%Banner%%) no-repeat;
+}
+
+.redditname a {
+color:black;
+font-size: 120%;
+}
+
+#header-bottom-left .redditname a {
+color:white;
+font-size: 200%;
+text-shadow: 1px 1px 1px #222,
+                 0 1px 1px #222,
+                 1px 0 1px #222,
+                 1px 1px 1px #222,
+                 0 1px 1px #222,
+                 1px 0 1px #222;
+}
+
+.side .redditname a {color:black;}
+
+.flair-yellowandblack { color: yellow; background: black; }
+
+#header .tabmenu li a { color: #000; background-color: #fff; }
+#header .tabmenu li.selected a { color: #FFB100; background-color: #fff; }
+#header .tabmenu li a:hover { color: #FFB100; background-color: #fff; }
