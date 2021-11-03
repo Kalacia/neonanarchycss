@@ -470,3 +470,8 @@ p.bottommenu a:hover {
 .md {
     color: #fff69f;
 }
+.link .usertext-body .md 
+{
+    border: 1px solid #369;
+    border-radius: 7px;
+;
